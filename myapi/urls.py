@@ -3,15 +3,15 @@ from . import views
 
 
 urlpatterns = [
-    path('users/', views.user_list),
-    path('sessions/', views.session_list),
-    path('user/<int:pk>/', views.user_detail),
-    path('login/', views.login),
-    path('logout/', views.logout),
-    path('levels/', views.levels_list),
-    path('songs/', views.levels_list),
-    path('level/<int:pk>/', views.level_detail),
-    path('attempts/', views.attempt_list),
-    path('attempt/<int:pk>', views.levels_list),
+    path('api/users/', views.user_list),
+    path('api/sessions/', views.session_list),
+    path('api/user/<int:pk>/', views.user_detail),
+    path('api/login/', views.login),
+    path('api/logout/', views.logout),
+    path('api/levels/', views.levels_list),
+    path('api/songs/', views.levels_list),
+    path('api/level/<int:pk>/', views.level_detail),
+    path('api/attempts/', views.attempt_list),
+    path('api/attempt/<int:pk>', views.levels_list),
 
 ]
