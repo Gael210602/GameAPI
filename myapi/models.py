@@ -61,3 +61,26 @@ class Attempt(models.Model):
             'user_id': self.user_id,
             'score': self.score
         }
+
+class GameVariables(models.Model):
+    variables_id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    lvl = models.IntegerField()
+    video = models.IntegerField()
+    Hs1 = models.IntegerField()
+    Hs2 = models.IntegerField()
+    Hs3 = models.IntegerField()
+    FirstTime = models.IntegerField()
+    score = models.IntegerField()
+    def __str__(self):
+        return {
+            'variables_id': self.variables_id,
+            'user_id': self.user_id,
+            'lvl': self.lvl,
+            'video': self.video,
+            'Hs1': self.Hs1,
+            'Hs2': self.Hs2,
+            'Hs3': self.Hs3,
+            'FirstTime': self.FirstTime,
+            'score': self.score
+        }
