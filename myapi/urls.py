@@ -14,5 +14,6 @@ urlpatterns = [
     path('api/attempts/', views.attempt_list),
     path('api/attempt/<int:pk>/', views.levels_list),
     path('api/gameVariables/', views.variables_list),
+    path('api/gameVariable/<int:pk>/', views.single_variables_user),
 
 ]
