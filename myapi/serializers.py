@@ -55,4 +55,4 @@ class LevelSerializer(serializers.ModelSerializer):
 class AttemptSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attempt
-        fields = ('attempt_id', 'level_id', 'status', 'game_time', 'user_id', 'score')
+        fields = ('attempt_id', 'level_id', 'status', 'user_id', 'score')

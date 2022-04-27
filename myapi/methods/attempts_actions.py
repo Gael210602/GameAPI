@@ -8,6 +8,7 @@ def attempts_actions(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
         attempt = AttemptSerializer(data=data)
+        print(data)
         if attempt.is_valid():
             attempt.save()
             return JsonResponse(attempt.data)

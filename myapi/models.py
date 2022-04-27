@@ -51,7 +51,6 @@ class Attempt(models.Model):
     attempt_id = models.AutoField(primary_key=True)
     level_id = models.ForeignKey(Level, on_delete=models.CASCADE)
     status = models.BooleanField()
-    game_time = models.DateTimeField(auto_now_add=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     score = models.IntegerField()
     def __str__(self):
@@ -59,7 +58,6 @@ class Attempt(models.Model):
             'attempt_id': self.attempt_id,
             'level_id': self.level_id,
             'status': self.status,
-            'game_time': self.game_time,
             'user_id': self.user_id,
             'score': self.score
         }
