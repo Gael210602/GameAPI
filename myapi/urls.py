@@ -12,6 +12,7 @@ urlpatterns = [
     path('api/songs/', views.levels_list),
     path('api/level/<int:pk>/', views.level_detail),
     path('api/attempts/', views.attempt_list),
-    path('api/attempt/<int:pk>', views.levels_list),
+    path('api/attempt/<int:pk>/', views.levels_list),
+    path('api/gameVariables/', views.variables_list),
 
 ]

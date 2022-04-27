@@ -8,6 +8,7 @@ from myapi.methods.logout import logout_method
 from myapi.methods.session_list import session_list_actions
 from myapi.methods.single_user_actions import single_user_actions
 from myapi.methods.userActions import user_actions
+from myapi.methods.variables_actions import variables_actions
 
 @csrf_exempt
 def user_list(request):
@@ -47,3 +48,7 @@ def attempt_list(request):
 @csrf_exempt
 def attempt_detail(request, pk):
     return attempt_actions(request, pk)
+
+@csrf_exempt
+def variables_list(request):
+    return variables_actions(request)
