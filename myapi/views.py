@@ -1,5 +1,6 @@
 from django.views.decorators.csrf import csrf_exempt
-from gameapi.constants import not_allowed
+from myapi.methods.attempt_action import attempt_actions
+from myapi.methods.attempts_actions import attempts_actions
 from myapi.methods.level_detail_Actions import single_level_actions
 from myapi.methods.levels_list import level_actions
 from myapi.methods.login import loginmethod
@@ -40,9 +41,9 @@ def level_detail(request, pk):
 
 @csrf_exempt
 def attempt_list(request):
-    return attempt_list(request)
+    return attempts_actions(request)
 
 
 @csrf_exempt
 def attempt_detail(request, pk):
-    return attempt_list(request, pk)
+    return attempt_actions(request, pk)

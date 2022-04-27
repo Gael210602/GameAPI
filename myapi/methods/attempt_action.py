@@ -4,7 +4,7 @@ from rest_framework.parsers import JSONParser
 from myapi.models import Attempt
 from myapi.serializers import AttemptSerializer
 
-def single_user_actions(request, pk):
+def attempt_actions(request, pk):
     try:
         attempt_obj = Attempt.objects.get(pk=pk)
     except Attempt.DoesNotExist:
