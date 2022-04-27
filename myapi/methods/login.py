@@ -25,7 +25,7 @@ def loginmethod(request):
             now = datetime.now()
             encoded_jwt = jwt.encode({"user_name": user.data['user_name'], 'sign_in': str(now), 'email':user.data['email'] }, encrypt_key(), algorithm="HS256")
             print("User: "+user.data['user_name']+' logged at: '+ str(now)) 
-            return JsonResponse({'message':'Login successful', 'jwt': encoded_jwt, 'user_id': user.data['user_id']}, status=201)
+            return JsonResponse({'message':'Login successful', 'jwt': encoded_jwt, 'user_id': user.data['user_id'], 'user_type': user.data['user_type']}, status=201)
         return JsonResponse(login_error, status=401)
         
     else:
