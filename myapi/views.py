@@ -79,9 +79,9 @@ def grafica(request):
     rows = cur.execute(stringSQL)
 
     for i in rows:
-        r = {}
-        r['country'] = i[0]
-
+        d = {}
+        d['country'] = i[0]
+        
         data.append([i[0], ""])
     datos_json = dumps(data)
     

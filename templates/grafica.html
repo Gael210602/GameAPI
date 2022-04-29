@@ -16,9 +16,10 @@
         var data = google.visualization.arrayToDataTable({{values|safe}});
         var options = {
           title: {{h_title|safe}} +' vs. '+ {{v_title|safe}},
-          hAxis: {title: {{h_title|safe}}},
-          vAxis: {title: {{v_title|safe}}},
-          {% comment %} legend: 'none' {% endcomment %}
+          {% comment %} hAxis: {title: {{h_title|safe}}},s {% endcomment %}
+          {% comment %} vAxis: {title: {{v_title|safe}}}, {% endcomment %}
+          enableRegionInteractivity: false,
+          legend: "none",
         };
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
         chart.draw(data, options);
