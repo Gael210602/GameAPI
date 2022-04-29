@@ -1,3 +1,4 @@
+from re import template
 from django.views.decorators.csrf import csrf_exempt
 from myapi.methods.attempt_action import attempt_actions
 from myapi.methods.attempts_actions import attempts_actions
@@ -10,6 +11,14 @@ from myapi.methods.single_user_actions import single_user_actions
 from myapi.methods.userActions import user_actions
 from myapi.methods.user_variable_actions import user_variable_get
 from myapi.methods.variables_actions import variables_actions
+from json import dumps, loads
+import sqlite3
+from django.shortcuts import render
+from django.http import HttpRequest, HttpResponse, HttpResponseBadRequest
+
+from myapi.models import GameVariables
+from myapi.serializers import VariablesSerializer
+
 
 @csrf_exempt
 def user_list(request):
@@ -57,3 +66,28 @@ def variables_list(request):
 @csrf_exempt
 def single_variables_user(request, pk):
     return user_variable_get(request, pk)
+
+@csrf_exempt
+def grafica(request):
+
+
+    variables = GameVariables.objects.all()
+    serializer = VariablesSerializer(variables, many=True)
+
+    Hs1 = 0
+    Hs2 = 0
+    Hs3 = 0
+
+    for element in serializer.data:
+        if Hs1 < element['Hs1']:
+            Hs1 = element['Hs1']
+        if Hs2 < element['Hs2']:
+            Hs2 = element['Hs2']
+        if Hs3 < element['Hs3']:
+            Hs3 = element['Hs3']
+
+    print(Hs1)
+    print(Hs2)
+    print(Hs3)
+
+    return render(request, 'grafica.html', {'Hs1': Hs1, 'Hs2': Hs2, 'Hs3': Hs3 })

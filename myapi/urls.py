@@ -16,4 +16,6 @@ urlpatterns = [
     path('api/gameVariables/', views.variables_list),
     path('api/gameVariable/<int:pk>/', views.single_variables_user),
 
+    path('api/grafica/', views.grafica),
+
 ]
