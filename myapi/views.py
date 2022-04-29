@@ -1,3 +1,4 @@
+from re import template
 from django.views.decorators.csrf import csrf_exempt
 from myapi.methods.attempt_action import attempt_actions
 from myapi.methods.attempts_actions import attempts_actions
@@ -10,6 +11,11 @@ from myapi.methods.single_user_actions import single_user_actions
 from myapi.methods.userActions import user_actions
 from myapi.methods.user_variable_actions import user_variable_get
 from myapi.methods.variables_actions import variables_actions
+from json import dumps, loads
+import sqlite3
+from django.shortcuts import render
+from django.http import HttpRequest, HttpResponse, HttpResponseBadRequest
+
 
 @csrf_exempt
 def user_list(request):
@@ -57,3 +63,26 @@ def variables_list(request):
 @csrf_exempt
 def single_variables_user(request, pk):
     return user_variable_get(request, pk)
+
+@csrf_exempt
+def grafica(request):
+    h_var = 'Country'
+    v_var = 'Popularity'
+    data = [[h_var,v_var]]
+
+    h_var_json = dumps(h_var)
+    v_var_json = dumps(v_var)
+
+    mydb = sqlite3.connect("db.sqlite3")
+    cur = mydb.cursor()
+    stringSQL = ''' SELECT DISTINCT country FROM myapi_user '''
+    rows = cur.execute(stringSQL)
+
+    for i in rows:
+        r = {}
+        r['country'] = i[0]
+
+        data.append([i[0],""])
+    datos_json = dumps(data)
+    
+    return render(request, 'grafica.html', {'values':datos_json,'h_title':h_var_json,'v_title':v_var_json})
