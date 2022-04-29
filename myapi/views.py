@@ -75,14 +75,14 @@ def grafica(request):
 
     mydb = sqlite3.connect("db.sqlite3")
     cur = mydb.cursor()
-    stringSQL = ''' SELECT DISTINCT country FROM myapi_user '''
+    stringSQL = ''' SELECT country FROM myapi_user '''
     rows = cur.execute(stringSQL)
 
     for i in rows:
         r = {}
         r['country'] = i[0]
 
-        data.append([i[0],""])
+        data.append([i[0], ""])
     datos_json = dumps(data)
     
     return render(request, 'grafica.html', {'values':datos_json,'h_title':h_var_json,'v_title':v_var_json})

@@ -18,7 +18,7 @@
           title: {{h_title|safe}} +' vs. '+ {{v_title|safe}},
           hAxis: {title: {{h_title|safe}}},
           vAxis: {title: {{v_title|safe}}},
-          legend: 'none'
+          {% comment %} legend: 'none' {% endcomment %}
         };
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
         chart.draw(data, options);
