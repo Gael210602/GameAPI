@@ -8,6 +8,7 @@ def variables_actions(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
         variables = VariablesSerializer(data=data)
+        print(data)
         if variables.is_valid():
             variables.save()
             return JsonResponse(variables.data)
