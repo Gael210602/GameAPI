@@ -84,3 +84,14 @@ class GameVariables(models.Model):
             'FirstTime': self.FirstTime,
             'score': self.score
         }
+
+class SessionData(models.Model):
+    session_data_id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    time = models.FloatField()
+    def __str__(self):
+        return {
+            'session_data_id': self.session_data_id,
+            'user_id': self.user_id,
+            'time': self.time,
+        }

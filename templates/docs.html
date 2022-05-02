@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Play Music Swagger</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/swagger-ui-dist@3/swagger-ui.css" />
+</head>
+
+<body>
+    <div>
+        <h1>Ruta: api/users/ </h1>
+        <h3>Link <a href="https://playmusic.com.mx/api/users/"> https://playmusic.com.mx/api/users/ </a></h3>
+        <h5>GET Method: </h5>
+        <p> La API que se muestra a continuación, despliega una lista con todos los usuarios registrados. Como se puede apreciar, cada índice de la lista le corresponde a un usuario registrado único con su información personal que nos digitó. La contraseña
+            está hasheada para respetar la privacidad del usuario. </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_id": 1,
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"password":"$2a$12$35nmzcnuNCHcK9p97e88Pe9E5MvtBd5I0F7iAL1NkA17S",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_type": "User",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"name": "Alex1",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_name": "Aledqwdqwdx",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"email": "gaelocote@gmail.com",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"dob": "2002-09-23",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"country": "Mexico"
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/users/ </h1>
+        <h3>Link <a href="https://playmusic.com.mx/api/users/"> https://playmusic.com.mx/api/users/ </a></h3>
+        <h5>POSTT Method: </h5>
+        <p> La API que se muestra a continuación, registra a un nuevo usuario, para registrar un usuario necesitamos los siguientes datos. </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_name": "Aledqwdqwdx",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"password":"Contraseña1234",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_type": "User",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"name": "Alex1",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"email": "gaelocote@gmail.com",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"dob": "2002-09-23",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"country": "Mexico"
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/user/
+            < int:pk>
+        </h1>
+        <h3>Link <a href=" https://playmusic.com.mx/api/user/1/"> https://playmusic.com.mx/api/user/1 </a></h3>
+        <h5>GET Method: </h5>
+        <p> Esta API muestra la información de un usuario en específico, según el número entero que se digita en el URL. En caso de digitar un número de un usuario inexistente, no mostrará nada.
+        </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_id": 1,
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"password":"$2a$12$35nmzcnuNCHcK9p97e88Pe9E5MvtBd5I0F7iAL1NkA17S",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_type": "User",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"name": "Alex1",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_name": "Aledqwdqwdx",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"email": "gaelocote@gmail.com",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"dob": "2002-09-23",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"country": "Mexico"
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/user/
+            < int:pk>
+        </h1>
+        <h3>Link <a href=" https://playmusic.com.mx/api/user/1/"> https://playmusic.com.mx/api/user/1 </a></h3>
+        <h5>PUT Method: </h5>
+        <p> Esta API actualiza la información de un usuario en específico.
+        </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"password":"Contraseña1234",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_type": "User",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"name": "Alex1",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_name": "Alex1",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"email": "gaelocote@gmail.com",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"dob": "2002-09-23",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"country": "Mexico"
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/user/
+            < int:pk>
+        </h1>
+        <h3>Link <a href=" https://playmusic.com.mx/api/user/1/"> https://playmusic.com.mx/api/user/1 </a></h3>
+        <h5>DELETE Method: </h5>
+        <p> Esta API elimina la información de un usuario en específico.
+        </p>
+        <ul>
+            <li>{}</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/sessions/</h1>
+        <h3>Link <a href=" https://playmusic.com.mx/api/sessions/"> https://playmusic.com.mx/api/sessions/ </a></h3>
+        <h5>GET Method: </h5>
+        <p> La API referente a esta sección, muestra el momento en que un usuario inicio sesión en el sistema, así como el instante en el que cerró sesión. Para mayor precisión, se genera un Jason Web Token (jwt). </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"session_id": 1,
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"sign_in": "2022-04-08T05:50:45.786775Z",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"sign_out": "2022-04-08T05:50:45.786976Z",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_id": 2,
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiIxM jMiLCJzaWduX2luIjoiMjAyMi0wNC0wOCAwNTo0Nzo1Mi44MTE2OTIiLCJlbWFpbCI6IjEyM0AxMjMuMTIzIn0.2V9yKLt-0JXVGptKuKvIQzstrRFXvS6kT1SeWB0Fk-Q"
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/levels/</h1>
+        <h3>Link <a href="https://playmusic.com.mx/api/levels/"> https://playmusic.com.mx/api/levels/ </a></h3>
+        <h5>GET Method: </h5>
+        <p> También hay una API referente a los niveles del videojuego, en ella, podemos encontrar el nombre de la canción que le corresponde a cada nivel, la duración en segundos y la dificultad del nivel.
+        </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"level_id": 7,
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"song_name": "botswana-richard-bodgers-main-version-00-30-7812",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"difficulty": "Easy",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"duration": 30
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/levels/</h1>
+        <h3>Link <a href="https://playmusic.com.mx/api/levels/"> https://playmusic.com.mx/api/levels/ </a></h3>
+        <h5>POST Method: </h5>
+        <p> En esta API agregamso un nuevo nivel y necesitamso estos datos:
+        </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"song_name": "botswana-richard-bodgers-main-version-00-30-7812",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"difficulty": "Easy",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"duration": 30
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/level/
+            < int:pk>
+        </h1>
+        <h3>Link <a href=" https://playmusic.com.mx/api/level/7/"> https://playmusic.com.mx/api/level/7 </a></h3>
+        <h5>GET Method: </h5>
+        <p> En esta API, encontramos la información específica a un nivel, dependiendo del número digitado en la URL. En caso de escribir un número inexistente como id de un nivel, no se despliega nada.
+        </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"level_id": 7,
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"song_name": "botswana-richard-bodgers-main-version-00-30-7812",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"difficulty": "Easy",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"duration": 30
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/level/
+            < int:pk>
+        </h1>
+        <h3>Link <a href=" https://playmusic.com.mx/api/level/7/"> https://playmusic.com.mx/api/level/7 </a></h3>
+        <h5>PUT Method: </h5>
+        <p> En esta API, actualizamos la información específica a un nivel, dependiendo del número digitado en la URL. En caso de escribir un número inexistente como id de un nivel, no se despliega nada.
+        </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"song_name": "botswana-richard-bodgers-main-version-00-30-7812",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"difficulty": "Easy",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"duration": 30
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/level/
+            < int:pk>
+        </h1>
+        <h3>Link <a href=" https://playmusic.com.mx/api/level/7/"> https://playmusic.com.mx/api/level/7 </a></h3>
+        <h5>DELETE Method: </h5>
+        <p> En esta API, eliminamos la información específica a un nivel, dependiendo del número digitado en la URL. En caso de escribir un número inexistente como id de un nivel, no se despliega nada.
+        </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"song_name": "botswana-richard-bodgers-main-version-00-30-7812",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"difficulty": "Easy",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"duration": 30
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/attempts/</h1>
+        <h3>Link <a href="https://playmusic.com.mx/api/attempts/"> https://playmusic.com.mx/api/attempts/ </a></h3>
+        <h5>GET Method: </h5>
+        <p> Con la API presentada, podemos encontrar información correspondiente a los intentos realizados por los usuarios. La información que se despliega es el nivel jugado, el estatus del intento (victoria o derrota), el id del usuario en cuestión y la
+            puntuación obtenida.
+        </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"attempt_id": 2,
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp; "level_id": 7,
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"status": true,
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_id": 7,
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"score": 2400
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/login/</h1>
+        <h3>Link <a href="https://playmusic.com.mx/api/levels/"> https://playmusic.com.mx/api/levels/ </a></h3>
+        <h5>POST Method: </h5>
+        <p> En esta API validamos los datos del usuario para iniciar sesión en el sistema:
+        </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"user_name": "Alex1",
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"password": "12345678",
+                <br /> }</li>
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h1>Ruta: api/logout/</h1>
+        <h3>Link <a href="https://playmusic.com.mx/api/levels/"> https://playmusic.com.mx/api/levels/ </a></h3>
+        <h5>POST Method: </h5>
+        <p> En esta API cerramos la sesion del usuario y guardamos la hora en que cerró sesión
+        </p>
+        <ul>
+            <li>{
+                <br /> &nbsp; &nbsp; &nbsp; &nbsp;"jwt": "Alex1",
+                <br /> }</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

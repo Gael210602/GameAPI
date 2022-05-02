@@ -2,7 +2,7 @@
 from rest_framework import serializers
 import bcrypt
 
-from .models import Attempt, GameVariables, Level, Session, User
+from .models import Attempt, GameVariables, Level, Session, SessionData, User
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -62,3 +62,9 @@ class VariablesSerializer(serializers.ModelSerializer):
     class Meta:
         model = GameVariables
         fields = ('variables_id', 'user_id', 'lvl', 'video', 'Hs1', 'Hs2', 'Hs3', 'FirstTime', 'score')
+
+
+class SessionDataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SessionData
+        fields = ('session_data_id', 'user_id', 'time')
