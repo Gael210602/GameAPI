@@ -6,6 +6,7 @@ from myapi.methods.level_detail_Actions import single_level_actions
 from myapi.methods.levels_list import level_actions
 from myapi.methods.login import loginmethod
 from myapi.methods.logout import logout_method
+from myapi.methods.sesion_data_methods import sesion_data_methods
 from myapi.methods.session_list import session_list_actions
 from myapi.methods.single_user_actions import single_user_actions
 from myapi.methods.userActions import user_actions
